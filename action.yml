@@ -1,0 +1,18 @@
+name: 'Check Cache'
+description: 'Check if the cache already exists'
+inputs:
+  paths:
+    description: 'The paths included in the cache'
+    required: true
+  key:
+    description: 'The key for the cache that would usually be used to restore the cache'
+    required: true
+  restore-keys:
+    description: 'Restore keys if any'
+    required: false
+outputs:
+  is-exists:
+    description: 'Will be true if the cache does already exist'
+runs:
+  using: 'node12'
+  main: 'index.js'
